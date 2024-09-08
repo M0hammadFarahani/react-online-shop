@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-function Shop({ search }) {
+function Shop({ search, handleBuy }) {
 
     const [products, setProducts] = useState([])
 
@@ -27,7 +27,7 @@ function Shop({ search }) {
                             <h5>{item.title}</h5>
                             <p className="fw-bold mb-4">${item.price}</p>     
                             <div className="btn-group">
-                                <button className="btn btn-success">Buy</button>
+                                <button className="btn btn-success" onClick={() => handleBuy(item)}>Buy</button>
                                 <Link className="btn btn-warning" to={`/detail/${item.id}`}>Detail</Link>
                             </div>
                         </div>

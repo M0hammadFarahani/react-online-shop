@@ -13,14 +13,19 @@ import Detail from './pages/detail/detail'
 function App() {
 
   const [search, setSearch] = useState('')
+  const [cart, setCart] = useState([])
+
+  const handleBuy = (item) => {
+    setCart([...cart, item])
+  }
 
   return (
     <>
     <BrowserRouter>
       <Navbar setSearch={setSearch} />
       <Routes>
-        <Route path='/' element={<Shop search={search} />} />
-        <Route path='/cart' element={<Cart />} />
+        <Route path='/' element={<Shop search={search} handleBuy={handleBuy} />} />
+        <Route path='/cart' element={<Cart cart={cart} setCart={setCart} />} />
         <Route path='/detail/:id' element={<Detail />} />
       </Routes>
     </BrowserRouter>
