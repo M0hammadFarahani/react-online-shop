@@ -4,7 +4,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
 
 
-function Navbar() {
+function Navbar({ setSearch }) {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container">
@@ -22,9 +22,10 @@ function Navbar() {
                                 Category
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Men's clothing</a></li>
+                                <li><a class="dropdown-item" href="#">Jewelery</a></li>
+                                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                                <li><a class="dropdown-item" href="#">Women's clothing</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -34,8 +35,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e) => setSearch(e.target.value)}/>
                     </form>
                 </div>
             </div>

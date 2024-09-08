@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-function Shop() {
+function Shop({ search }) {
 
     const [products, setProducts] = useState([])
 
@@ -19,7 +19,9 @@ function Shop() {
             <h1 className="text-center my-5">Shop</h1>
             <div className="row">
                 {
-                    products.map((item) => (
+                    products.filter((item) => {
+                        return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search)
+                    }).map((item) => (
                         <div className="col-lg-4 col-md-6 p-5" key={item.id} style={{height: '500px'}} >
                             <img src={item.image} className="w-100 h-50 mb-4" />
                             <h5>{item.title}</h5>
