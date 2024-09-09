@@ -8,7 +8,9 @@ function Navbar({ setSearch }) {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container">
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#">
+                    <img src="/public/react.svg" style={{width: '50px'}} />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -17,17 +19,6 @@ function Navbar({ setSearch }) {
                         <li class="nav-item">
                             <Link to='/' className="nav-link">Shop</Link>
                         </li>        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Category
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Men's clothing</a></li>
-                                <li><a class="dropdown-item" href="#">Jewelery</a></li>
-                                <li><a class="dropdown-item" href="#">Electronics</a></li>
-                                <li><a class="dropdown-item" href="#">Women's clothing</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item">
                             <Link to='/cart' className="nav-link">
                                 <FontAwesomeIcon icon={faShoppingCart}/>
