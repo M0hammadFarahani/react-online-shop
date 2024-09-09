@@ -7,6 +7,7 @@ import Shop from './pages/shop/shop'
 import Cart from './pages/cart/cart'
 import Navbar from './components/navbar'
 import Detail from './pages/detail/detail'
+import { toast } from 'react-toastify'
 
 
 
@@ -17,6 +18,16 @@ function App() {
 
   const handleBuy = (item) => {
     setCart([...cart, item])
+
+    toast.success('Added to cart', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
   }
 
   return (

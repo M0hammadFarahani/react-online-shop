@@ -1,3 +1,8 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 function Cart({ cart, setCart }) {
 
     const handleRemove = (itemId) => {
@@ -6,6 +11,16 @@ function Cart({ cart, setCart }) {
         })
 
         setCart(filteredCart)
+
+        toast.error('Removed from cart', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        })
     }
 
     return (
@@ -20,6 +35,7 @@ function Cart({ cart, setCart }) {
                 </div>
             ))
         }
+        <ToastContainer/>
         </>
     )
 }
