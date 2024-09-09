@@ -27,6 +27,9 @@ function Cart({ cart, setCart }) {
         <>
         <h1 className="text-center my-5">Cart</h1>
         {
+            cart.length === 0 ?
+            <p className='text-muted text-center pt-5'>There is no product</p>
+            :
             cart.map((item) => (
                 <div className="w-50 p-4 bg-dark text-light offset-3 mb-4 rounded">
                     <h2 className="mb-4">{item.title}</h2>
