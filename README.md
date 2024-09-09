@@ -1,8 +1,11 @@
-# React + Vite
+# Online Shop App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple online shop application built using React and Vite.
+The app includes the following features:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- SPA
+- Adding products to the cart
+- Removing products from the cart
+- Searching and finding specific products
+- Clicking on each product to see its details
